@@ -1,11 +1,10 @@
-// @ts-nocheck
-//★★LINE Messaging APIのチャネルアクセストークン★★
+//LINE Messaging APIのチャネルアクセストークン
 var LINE_ACCESS_TOKEN = "Mv5JWhiE/LkQLcyCJiju+WdwGBH8LLkAGsyHWd8PLZDUafkbg3w92Mg99qNwyI+bsc+Y/xManBaVwlTeKS2g0L4E97BwSvW2Yd9Tg6cU327bopYNepG3BoBDwsIG97CbCNuxLyrHG3b7k/QCPEvQuQdB04t89/1O/w1cDnyilFU=";
 
-//★★スプレッドシートID★★
+//スプレッドシートID
 var ss = SpreadsheetApp.openById("1IUtaffAixePvJ_h5iESsln7ANCXSfDs9asDmTzAL_hQ");
 
-//★★シート名★★
+//シート名
 var sh = ss.getSheetByName("reply1");
 
 
