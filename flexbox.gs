@@ -5,13 +5,22 @@ function doPost(e) {
   var obj = JSON.parse(contents);
   var events = obj["events"];
   for (var i = 0; i < events.length; i++) {
-    if (events[i].type == "message") {
-      reply_message(events[i]);
+
+    //if (events[i].type == "message") {
+    //  reply_message(events[i]);
+    //}
+
+    switch (events[i].type) {
+      case "message":
+        reply_message(events[i]);
+        break;
     }
+
   }
 }
 
 function reply_message(e) {
+  //＠＠ここから↓＠＠
   var postData = {
     "replyToken": e.replyToken,
     "messages": [{
@@ -46,6 +55,7 @@ function reply_message(e) {
       }
     }]
   };
+  //＠＠ここがメッセージの設定↑＠＠
   var options = {
     "method": "post",
     "headers": {
