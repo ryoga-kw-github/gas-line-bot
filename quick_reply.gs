@@ -14,15 +14,14 @@ function doPost(e) {
 //イベントタイプがメッセージだった場合
 function reply(e) {
     //メッセージとuserIdを取り出す
-    var user_message = e.message.text,
-        user_id = e.source.userId;
+    var user_message = e.message.text;
     //メッセージがクイックリプライテストだった場合
     if (user_message == "クイックリプライテスト") {
         var message = {
             "replyToken": e.replyToken,
             "messages": [{
                 "type": "text",
-                "text": "選択してください",
+                "text": "選択してください。",
                 "quickReply": {
                     "items": [
                         {
