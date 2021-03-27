@@ -1,3 +1,5 @@
+/*
+
 //Webhookでメッセージを受信
 function doPost(event) {
 
@@ -28,3 +30,5 @@ function doPost(event) {
       "payload": payload
   });
 }
+
+*/
