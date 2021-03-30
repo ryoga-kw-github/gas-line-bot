@@ -75,6 +75,21 @@ function reply(e) {
         }
       }]
     };
+  }else if (user_message == "Bot>なか卯"){
+    for(/*シートに登録した商品の数分繰り返す→★右の式は保存するために適当に書いたやつ★→*/var i = 0;  i < 1;  i++){
+      //カルーセルタイプのjsonを生成
+      //更にどのカルーセルを選択したかで分岐させる
+    }
+  }else if (user_message == "Bot>なか卯"){
+    for(/*シートに登録した商品の数分繰り返す→★右の式は保存するために適当に書いたやつ★→*/var i = 0;  i < 1;  i++){
+      //カルーセルタイプのjsonを生成
+      //更にどのカルーセルを選択したかで分岐させる
+    }
+  }else if (user_message == "Bot>なか卯"){
+    for(/*シートに登録した商品の数分繰り返す→★右の式は保存するために適当に書いたやつ★→*/var i = 0;  i < 1;  i++){
+      //カルーセルタイプのjsonを生成
+      //更にどのカルーセルを選択したかで分岐させる
+    }
   }
   var replyData = {
       "method": "post",
@@ -84,5 +99,6 @@ function reply(e) {
       },
       "payload": JSON.stringify(message)
   };
+  //★★★送信部分★★★
   UrlFetchApp.fetch("https://api.line.me/v2/bot/message/reply", replyData);
 }
