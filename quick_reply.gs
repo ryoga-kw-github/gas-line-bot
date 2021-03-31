@@ -76,16 +76,25 @@ function reply(e) {
       }]
     };
   }else if (user_message == "Bot>なか卯"){
+    //なか卯シートの情報を取得して代入
+    const nakauSheet = spreadsheet.getSheetByName('nakau');
+
     for(/*シートに登録した商品の数分繰り返す→★右の式は保存するために適当に書いたやつ★→*/var i = 0;  i < 1;  i++){
       //カルーセルタイプのjsonを生成
       //更にどのカルーセルを選択したかで分岐させる
     }
   }else if (user_message == "Bot>はま寿司"){
+    //はま寿司シートの情報を取得して代入
+    const hamazushiSheet = spreadsheet.getSheetByName('hamazushi');
+
     for(/*シートに登録した商品の数分繰り返す→★右の式は保存するために適当に書いたやつ★→*/var i = 0;  i < 1;  i++){
       //カルーセルタイプのjsonを生成
       //更にどのカルーセルを選択したかで分岐させる
     }
   }else if (user_message == "Bot>ほっかほっか亭"){
+    //ほっかほっか亭シートの情報を取得して代入
+    const hokkateiSheet = spreadsheet.getSheetByName('hokkatei');
+
     for(/*シートに登録した商品の数分繰り返す→★右の式は保存するために適当に書いたやつ★→*/var i = 0;  i < 1;  i++){
       //カルーセルタイプのjsonを生成
       //更にどのカルーセルを選択したかで分岐させる
