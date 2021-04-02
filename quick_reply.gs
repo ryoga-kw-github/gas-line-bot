@@ -6,6 +6,8 @@ const spreadsheet = SpreadsheetApp.openById("1IUtaffAixePvJ_h5iESsln7ANCXSfDs9as
 
 //なか卯シート(あとでif文の中に突っ込む)
 const nakauSheet = spreadsheet.getSheetByName('nakau');
+var nku = nakauSheet.getRange(1,1,2,3).getValues();
+Logger.log(nku);
 
 //はま寿司シート(あとでif文の中に突っ込む)
 const hamazushiSheet = spreadsheet.getSheetByName('hamazushi');
@@ -78,6 +80,7 @@ function reply(e) {
   }else if (user_message == "Bot>なか卯"){
     //なか卯シートの情報を取得して代入
     const nakauSheet = spreadsheet.getSheetByName('nakau');
+    nakauSheet.getRange(1,1).getValues;
 
     for(/*シートに登録した商品の数分繰り返す→★右の式は保存するために適当に書いたやつ★→*/var i = 0;  i < 1;  i++){
       //カルーセルタイプのjsonを生成
