@@ -6,8 +6,17 @@ const spreadsheet = SpreadsheetApp.openById("1IUtaffAixePvJ_h5iESsln7ANCXSfDs9as
 
 //なか卯シート(あとでif文の中に突っ込む)
 const nakauSheet = spreadsheet.getSheetByName('nakau');
-var nku = nakauSheet.getRange(1,1,2,3).getValues();
-Logger.log(nku);
+
+var lastRow = nakauSheet.getLastRow();
+for(var i=1;  i<=lastRow;  i++){
+      var name = nakauSheet.getRange(i,1).getValues();
+      var size = nakauSheet.getRange(i,2).getValues();
+      var price = nakauSheet.getRange(i,3).getValues();
+      Logger.log(name+":"+size+":"+price);
+}
+
+
+//Logger.log(nku + nku2 + nku3);
 
 //はま寿司シート(あとでif文の中に突っ込む)
 const hamazushiSheet = spreadsheet.getSheetByName('hamazushi');
@@ -80,9 +89,20 @@ function reply(e) {
   }else if (user_message == "Bot>なか卯"){
     //なか卯シートの情報を取得して代入
     const nakauSheet = spreadsheet.getSheetByName('nakau');
-    nakauSheet.getRange(1,1).getValues;
 
-    for(/*シートに登録した商品の数分繰り返す→★右の式は保存するために適当に書いたやつ★→*/var i = 0;  i < 1;  i++){
+    //最終行がどこかを数字として取得する
+    var lastRow = sheet.getLastRow();
+    
+    for(var i=1;  i<=lastRow;  i++){
+      //商品名
+      var name = nakauSheet.getRange(i,1).getValues();
+      //サイズ
+      var size = nakauSheet.getRange(i,2).getValues();
+      //値段
+      var price = nakauSheet.getRange(i,3).getValues();
+      //テスト出力をした
+      Logger.log(name+":"+size+":"+price);
+
       //カルーセルタイプのjsonを生成
       //更にどのカルーセルを選択したかで分岐させる
     }
