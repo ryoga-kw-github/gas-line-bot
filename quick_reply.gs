@@ -105,7 +105,7 @@ function reply(e) {
         "replyToken": e.replyToken,
         "messages": [{
           "type": "text",
-          "text": name,
+          "text": "name",
         }]
       };
 
