@@ -100,14 +100,35 @@ function reply(e) {
       var size = nakauSheet.getRange(i,2).getValues();
       //値段
       var price = nakauSheet.getRange(i,3).getValues();
-      //テスト出力
+      //テスト出力をした
+      Logger.log(name+":"+size+":"+price);
       var message = {
         "replyToken": e.replyToken,
         "messages": [{
           "type": "text",
-          "text": "なか卯クリックした"
+          "text": "選択してください。",
+          "quickReply": {
+            "items": [
+              {
+                "type": "action",
+                "action": {
+                    "type": "message",
+                    "label": "なか卯",
+                    "text": "卯！！"
+                }
+              },
+              {
+                "type": "action",
+                "action": {
+                    "type": "message",
+                    "label": "はま寿司",
+                    "text": "はま寿司！！"
+                }
+              }
+            ]
+          }
         }]
-      };
+    };
 
       //カルーセルタイプのjsonを生成
       //更にどのカルーセルを選択したかで分岐させる
