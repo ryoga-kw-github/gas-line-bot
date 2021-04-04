@@ -92,7 +92,7 @@ function reply(e) {
 
     //最終行がどこかを数字として取得する
     var lastRow = sheet.getLastRow();
-    
+
     for(var i=1;  i<=lastRow;  i++){
       //商品名
       var name = nakauSheet.getRange(i,1).getValues();
@@ -100,8 +100,14 @@ function reply(e) {
       var size = nakauSheet.getRange(i,2).getValues();
       //値段
       var price = nakauSheet.getRange(i,3).getValues();
-      //テスト出力をした
-      Logger.log(name+":"+size+":"+price);
+      //テスト出力
+      var message = {
+        "replyToken": e.replyToken,
+        "messages": [{
+          "type": "text",
+          "text": name+":"+size+":"+price
+        }]
+      };
 
       //カルーセルタイプのjsonを生成
       //更にどのカルーセルを選択したかで分岐させる
