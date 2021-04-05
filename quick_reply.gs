@@ -26,11 +26,9 @@ const hokkateiSheet = spreadsheet.getSheetByName('hokkatei');
 
 
 /*★★★シートから情報を取得できるかのテスト★★★
-
 var testCol = hamazushiSheet.getLastColumn();
 var dddd = hamazushiSheet.getRange(1,1,1,testCol).getValues();
 Logger.log(dddd);
-
 */
 
 
@@ -87,21 +85,6 @@ function reply(e) {
       }]
     };
   }else if (user_message == "Bot>なか卯"){
-    //なか卯シートの情報を取得して代入
-    const nakauSheet = spreadsheet.getSheetByName('nakau');
-
-    //最終行がどこかを数字として取得する
-    var lastRow = sheet.getLastRow();
-
-    for(var i=1;  i<=lastRow;  i++){
-      //商品名
-      var name = nakauSheet.getRange(i,1).getValues();
-      //サイズ
-      var size = nakauSheet.getRange(i,2).getValues();
-      //値段
-      var price = nakauSheet.getRange(i,3).getValues();
-      //テスト出力をした
-      Logger.log(name+":"+size+":"+price);
       var message = {
         "replyToken": e.replyToken,
         "messages": [{
@@ -128,27 +111,9 @@ function reply(e) {
             ]
           }
         }]
-    };
-
-      //カルーセルタイプのjsonを生成
-      //更にどのカルーセルを選択したかで分岐させる
-    }
+      };
   }else if (user_message == "Bot>はま寿司"){
-    //はま寿司シートの情報を取得して代入
-    const hamazushiSheet = spreadsheet.getSheetByName('hamazushi');
-
-    for(/*シートに登録した商品の数分繰り返す→★右の式は保存するために適当に書いたやつ★→*/var i = 0;  i < 1;  i++){
-      //カルーセルタイプのjsonを生成
-      //更にどのカルーセルを選択したかで分岐させる
-    }
   }else if (user_message == "Bot>ほっかほっか亭"){
-    //ほっかほっか亭シートの情報を取得して代入
-    const hokkateiSheet = spreadsheet.getSheetByName('hokkatei');
-
-    for(/*シートに登録した商品の数分繰り返す→★右の式は保存するために適当に書いたやつ★→*/var i = 0;  i < 1;  i++){
-      //カルーセルタイプのjsonを生成
-      //更にどのカルーセルを選択したかで分岐させる
-    }
   }
   var replyData = {
       "method": "post",
