@@ -85,6 +85,13 @@ function reply(e) {
       }]
     };
   }else if (user_message == "Bot>なか卯"){
+    const nakauSheet = spreadsheet.getSheetByName('nakau');
+    var lastRow = nakauSheet.getLastRow();
+    for(var i=1;  i<=lastRow;  i++){
+      var name = nakauSheet.getRange(i,1).getValues();
+      var size = nakauSheet.getRange(i,2).getValues();
+      var price = nakauSheet.getRange(i,3).getValues();
+
       var message = {
         "replyToken": e.replyToken,
         "messages": [{
@@ -112,6 +119,7 @@ function reply(e) {
           }
         }]
       };
+    }
   }else if (user_message == "Bot>はま寿司"){
   }else if (user_message == "Bot>ほっかほっか亭"){
   }
