@@ -59,25 +59,25 @@ function reply(e) {
             {
               "type": "action",
               "action": {
-                  "type": "message",
-                  "label": "なか卯",
-                  "text": "Bot>なか卯"
+                "type": "message",
+                "label": "なか卯",
+                "text": "Bot>なか卯"
               }
             },
             {
               "type": "action",
               "action": {
-                  "type": "message",
-                  "label": "はま寿司",
-                  "text": "Bot>はま寿司"
+                "type": "message",
+                "label": "はま寿司",
+                "text": "Bot>はま寿司"
               }
             },
             {
               "type": "action",
               "action": {
-                  "type": "message",
-                  "label": "ほっかほっか亭",
-                  "text": "Bot>ほっかほっか亭"
+                "type": "message",
+                "label": "ほっかほっか亭",
+                "text": "Bot>ほっかほっか亭"
               }
             }
           ]
@@ -87,39 +87,45 @@ function reply(e) {
   }else if (user_message == "Bot>なか卯"){
     const nakauSheet = spreadsheet.getSheetByName('nakau');
     var lastRow = nakauSheet.getLastRow();
+
+    //カルーセルメッセージを入れるための、空の配列
+    var columns = [];
+
     for(var i=1;  i<=lastRow;  i++){
       var name = nakauSheet.getRange(i,1).getValues();
       var size = nakauSheet.getRange(i,2).getValues();
       var price = nakauSheet.getRange(i,3).getValues();
 
-      var message = {
-        "replyToken": e.replyToken,
-        "messages": [{
-          "type": "text",
-          "text": "選択してください。",
-          "quickReply": {
-            "items": [
-              {
-                "type": "action",
-                "action": {
-                    "type": "message",
-                    "label": "なか卯",
-                    "text": "卯！！"
-                }
-              },
-              {
-                "type": "action",
-                "action": {
-                    "type": "message",
-                    "label": "はま寿司",
-                    "text": "はま寿司！！"
-                }
-              }
-            ]
+      //.pushメソッドは配列に新しいデータを追加するためのメソッド
+      columns.push({
+        "title": name+size,
+        "text": price,
+        "actions": [
+          {
+            "type": "message",
+            "label": name+"を追加",
+            "text": "Bot>Add:" + name + ":"+ size + ":" + price
+          },
+          {
+            "type": "message",
+            "label": "メモを中断",
+            "text": "Bot>Cancel"
           }
-        }]
-      };
+        ]
+      });
     }
+
+    var message = {
+      "replyToken": e.replyToken,
+      "messages": [{
+        "type": "template",
+        "altText": "this is a carousel template",
+        "template": {
+          "type": "carousel",
+          "columns": columns
+        }
+      }]
+    };
   }else if (user_message == "Bot>はま寿司"){
   }else if (user_message == "Bot>ほっかほっか亭"){
   }
