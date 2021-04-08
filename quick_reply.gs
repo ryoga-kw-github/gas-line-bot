@@ -89,43 +89,21 @@ function reply(e) {
     var lastRow = nakauSheet.getLastRow();
 
     //カルーセルメッセージを入れるための、空の配列
-    var columns = [];
-
+    //var columns = [];
     for(var i=1;  i<=lastRow;  i++){
       var name = nakauSheet.getRange(i,1).getValues();
       var size = nakauSheet.getRange(i,2).getValues();
       var price = nakauSheet.getRange(i,3).getValues();
 
-      //.pushメソッドは配列に新しいデータを追加するためのメソッド
-      columns.push({
-        "title": name+size,
-        "text": price,
-        "actions": [
-          {
-            "type": "message",
-            "label": name+"を追加",
-            "text": "Bot>Add:" + name + ":"+ size + ":" + price
-          },
-          {
-            "type": "message",
-            "label": "メモを中断",
-            "text": "Bot>Cancel"
-          }
-        ]
-      });
+      var message = {
+        "replyToken": e.replyToken,
+        "messages": [{
+          "type": "text",
+          "text": name+":"+size+":"+price
+        }]
+      };
     }
-
-    var message = {
-      "replyToken": e.replyToken,
-      "messages": [{
-        "type": "template",
-        "altText": "this is a carousel template",
-        "template": {
-          "type": "carousel",
-          "columns": columns
-        }
-      }]
-    };
+    
   }else if (user_message == "Bot>はま寿司"){
   }else if (user_message == "Bot>ほっかほっか亭"){
   }
