@@ -98,13 +98,36 @@ function reply(e) {
       var message = {
         "replyToken": e.replyToken,
         "messages": [{
-          "type": "text",
-          "text": name+":"+size+":"+price
+          "type": "template",
+          "template": {
+            "type": "buttons",
+            "title": "商品名",
+            "text": "値段",
+            "actions": [
+              {
+                "type": "message",
+                "label": name,
+                "text": name
+              },
+              {
+                "type": "message",
+                "label": "Cancel",
+                "text": "Bot>cancel"
+              }
+            ]
+          }
         }]
       };
     }
-    
+
   }else if (user_message == "Bot>はま寿司"){
+    var message = {
+      "replyToken": e.replyToken,
+      "messages": [{
+        "type": "text",
+        "text": "送信したいメッセージ"
+      }]
+    };
   }else if (user_message == "Bot>ほっかほっか亭"){
   }
   var replyData = {
