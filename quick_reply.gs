@@ -121,13 +121,41 @@ function reply(e) {
     }
 
   }else if (user_message == "Bot>はま寿司"){
+
+
+
     var message = {
       "replyToken": e.replyToken,
       "messages": [{
-        "type": "text",
-        "text": "送信したいメッセージ"
+        "type": "template",
+        "title": "タイトルです",
+        "text": "送信したいメッセージ",
+        "template": {
+          "type": "buttons",
+          "actions": [
+            {
+              "type": "message",
+              "label": "アクション 1",
+              "text": "アクション 1"
+            },
+            {
+              "type": "message",
+              "label": "アクション 2",
+              "text": "アクション 2"
+            },
+            {
+              "type": "message",
+              "label": "アクション 3",
+              "text": "アクション 3"
+            }
+          ]
+        }
       }]
     };
+
+
+
+
   }else if (user_message == "Bot>ほっかほっか亭"){
   }
   var replyData = {
