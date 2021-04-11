@@ -89,36 +89,43 @@ function reply(e) {
     var lastRow = nakauSheet.getLastRow();
 
     //カルーセルメッセージを入れるための、空の配列
-    //var columns = [];
+    var columns = [];
+
     for(var i=1;  i<=lastRow;  i++){
       var name = nakauSheet.getRange(i,1).getValues();
       var size = nakauSheet.getRange(i,2).getValues();
       var price = nakauSheet.getRange(i,3).getValues();
 
-      var message = {
-        "replyToken": e.replyToken,
-        "messages": [{
-          "type": "template",
-          "template": {
-            "type": "buttons",
-            "title": "商品名",
-            "text": "値段",
-            "actions": [
-              {
-                "type": "message",
-                "label": name,
-                "text": name
-              },
-              {
-                "type": "message",
-                "label": "Cancel",
-                "text": "Bot>cancel"
-              }
-            ]
+      var column = {
+        "title": name,
+        "text": size,
+        "action": [
+          {
+            "type": "message",
+            "label": "addcount",
+            "text": "Bot>add"
+          },
+          {
+            "type": "message",
+            "label": "cancel",
+            "text": "Bot>Cancel"
           }
-        }]
+        ]
       };
+
+      columns[i] = column;
     }
+
+    var message = {
+      "replyToken": e.replyToken,
+      "messages": [{
+        "type": "template",
+        "template": {
+          "type": "carousel",
+          "columns": columns
+        }
+      }]
+    };
 
   }else if (user_message == "Bot>はま寿司"){
 
