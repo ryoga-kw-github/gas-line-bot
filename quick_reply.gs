@@ -131,18 +131,13 @@ function reply(e) {
         "type": "template",
         "altText": "確認テンプレートメッセージ",
         "template": {
-          "type": "confirm",
-          "text": "以下より選択してください。",
+          "type": "buttons",
+          "text": "ボタンをクリック",
           "actions": [
             {
               "type": "message",
-              "label": "Yes",
-              "text": "yes"
-            },
-            {
-              "type": "message",
-              "label": "No",
-              "text": "no"
+              "label": "Click me",
+              "text": "ボタンをクリックしました。"
             }
           ]
         }
