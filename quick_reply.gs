@@ -125,28 +125,24 @@ function reply(e) {
 
 
     var message = {
+    
       "replyToken": e.replyToken,
       "messages": [{
         "type": "template",
-        "title": "タイトルです",
-        "text": "送信したいメッセージ",
+        "altText": "確認テンプレートメッセージ",
         "template": {
-          "type": "buttons",
+          "type": "confirm",
+          "text": "以下より選択してください。",
           "actions": [
             {
               "type": "message",
-              "label": "アクション 1",
-              "text": "アクション 1"
+              "label": "Yes",
+              "text": "yes"
             },
             {
               "type": "message",
-              "label": "アクション 2",
-              "text": "アクション 2"
-            },
-            {
-              "type": "message",
-              "label": "アクション 3",
-              "text": "アクション 3"
+              "label": "No",
+              "text": "no"
             }
           ]
         }
