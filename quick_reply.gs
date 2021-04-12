@@ -155,6 +155,53 @@ function reply(e) {
 
 
   }else if (user_message == "Bot>ほっかほっか亭"){
+    const nakauSheet = spreadsheet.getSheetByName('nakau');
+    var lastRow = nakauSheet.getLastRow();
+
+    //カルーセルメッセージを入れるための、空の配列
+    var columns = [];
+
+    for(var i=1;  i<=lastRow;  i++){
+      var name = nakauSheet.getRange(i,1).getValues();
+      var size = nakauSheet.getRange(i,2).getValues();
+      var price = nakauSheet.getRange(i,3).getValues();
+
+      var column = {
+        "title": name,
+        "text": size,
+        "defaultAction": {
+          "type": "message",
+          "label": "View detail",
+          "text": "shopURL"
+        },
+        "actions": [
+          {
+            "type": "message",
+            "label": "基本情報を見る",
+            "text": "dataURL"
+          },
+          {
+            "type": "message",
+            "label": "地図を見る",
+            "text": "mapURL"
+          }
+        ]
+      }
+
+      columns[i] = column;
+    }
+
+    var message = {
+      "replyToken": e.replyToken,
+      "messages": [{
+        "type": "template",
+        "template": {
+          "type": "carousel",
+          "columns": columns
+        }
+      }]
+    };
+
   }
   var replyData = {
       "method": "post",
