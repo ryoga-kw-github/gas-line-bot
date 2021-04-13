@@ -169,11 +169,6 @@ function reply(e) {
       var column = {
         "title": name,
         "text": size,
-        "defaultAction": {
-          "type": "message",
-          "label": "View detail",
-          "text": "shopURL"
-        },
         "actions": [
           {
             "type": "message",
