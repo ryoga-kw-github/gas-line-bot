@@ -136,7 +136,7 @@ function reply(e) {
           "actions": [
             {
               "type": "message",
-              "label": "Click me",
+              "label": "ここをクリック",
               "text": "ボタンをクリックしました。"
             }
           ]
