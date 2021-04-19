@@ -91,7 +91,7 @@ function reply(e) {
 
       var column = {
         "title": name,
-        "text": size,
+        "text": size + price,
         "action": [
           {
             "type": "message",
