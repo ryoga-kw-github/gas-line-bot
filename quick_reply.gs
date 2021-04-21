@@ -91,19 +91,19 @@ function reply(e) {
 
       var column = {
         "title": name,
-        "text": size+":"+price,
-        "action": [
-          {
-            "type": "message",
-            "label": "addcount",
-            "text": "Bot>add"
-          },
-          {
-            "type": "message",
-            "label": "cancel",
-            "text": "Bot>Cancel"
-          }
-        ]
+        "text": size+":"+price//,
+        //"action": [
+        //  {
+        //    "type": "message",
+        //    "label": "addcount",
+        //    "text": "Bot>add"
+        //  },
+        //  {
+        //    "type": "message",
+        //    "label": "cancel",
+        //    "text": "Bot>Cancel"
+        //  }
+        //]
       };
 
       columns[i] = column;
