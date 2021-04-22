@@ -91,7 +91,7 @@ function reply(e) {
 
       var column = {
         "title": name,
-        "text": size+":"+price//,
+        "text": size//,
         //"action": [
         //  {
         //    "type": "message",
