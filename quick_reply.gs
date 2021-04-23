@@ -154,14 +154,10 @@ function reply(e) {
     //カルーセルメッセージを入れるための、空の配列
     var columns = [];
 
-    for(var i=1;  i<=lastRow;  i++){
-      var name = nakauSheet.getRange(i,1).getValues();
-      var size = nakauSheet.getRange(i,2).getValues();
-      var price = nakauSheet.getRange(i,3).getValues();
-
+    for(var i=1;  i<=10;  i++){
       var column = {
-        "title": name,
-        "text": size,
+        "title": "name",
+        "text": "size",
         "actions": [
           {
             "type": "message",
