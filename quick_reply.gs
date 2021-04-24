@@ -160,12 +160,12 @@ function reply(e) {
         "text": "size",
         "actions": [
           {
-            "type": "message",
+            "type": "buttons",
             "label": "基本情報を見る",
             "text": "dataURL"
           },
           {
-            "type": "message",
+            "type": "buttons",
             "label": "地図を見る",
             "text": "mapURL"
           }
