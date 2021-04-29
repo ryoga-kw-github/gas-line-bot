@@ -2,5 +2,7 @@ const TOKEN = "Mv5JWhiE/LkQLcyCJiju+WdwGBH8LLkAGsyHWd8PLZDUafkbg3w92Mg99qNwyI+bs
 
 //ここが本体部分
 function doPost(e) {
+  //メッセージが来たか判定して、来てたらテキストに変換して変数に代入する。
+  
 
 }
