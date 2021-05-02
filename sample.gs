@@ -14,5 +14,4 @@ const hokkateiSheet = spreadsheet.getSheetByName('hokkatei');
 function doPost(e) {
   //メッセージが来たか判定して、来てたらテキストに変換して変数に代入する。
   
-
 }
