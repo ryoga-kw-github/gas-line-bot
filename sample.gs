@@ -13,5 +13,11 @@ const hokkateiSheet = spreadsheet.getSheetByName('hokkatei');
 //ここが本体部分
 function doPost(e) {
   //メッセージが来たか判定して、来てたらテキストに変換して変数に代入する。
-  
+
+}
+
+//イベントタイプがメッセージだった時
+function reply(e) {
+  ////送られたメッセージを取り出して代入
+  var user_message = e.message.text;
 }
