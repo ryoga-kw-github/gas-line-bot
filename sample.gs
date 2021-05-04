@@ -20,4 +20,7 @@ function doPost(e) {
 function reply(e) {
   ////送られたメッセージを取り出して代入
   var user_message = e.message.text;
+
+  //メッセージがクイックリプライテストだった場合
+  
 }
