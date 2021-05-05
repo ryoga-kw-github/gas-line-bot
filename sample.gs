@@ -22,5 +22,8 @@ function reply(e) {
   var user_message = e.message.text;
 
   //メッセージがクイックリプライテストだった場合
-  
+  if (user_message == "ごはんメモ") {
+    //送られたメッセージがごはんメモだった場合
+  }
+
 }
