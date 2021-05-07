@@ -23,10 +23,14 @@ function reply(e) {
 
   //メッセージがクイックリプライテストだった場合
   if (user_message == "ごはんメモ") {
-    //送られたメッセージがごはんメモだった場合
+    //送られたメッセージが"ごはんメモ"だった場合
+    var message = {
+      //ここにjson書く
+    }
+  }else if (user_message == "説明") {
+    //送られたメッセージが"説明"だった場合
     var message = {
       //ここにjson書く
     }
   }
-
 }
