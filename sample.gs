@@ -32,6 +32,22 @@ function reply(e) {
     var message = {
       //ここにjson書く
     }
+  }else if (user_message == "なか卯") {
+    //送られたメッセージが"なか卯"だった場合
+
+    //Googleスプレッドシートのなか卯シートを参照する
+    const nakauSheet = spreadsheet.getSheetByName('nakau');
+    
+    ////シートのデータを入力している最終行までの数を取得する
+    var lastRow = nakauSheet.getLastRow();
+
+    //Googleスプレッドシートのなか卯シートを参照し、データを入力している最終行まで繰り返しセルのデータを取得する。
+
+
+
+    var message = {
+      //ここにjson書く
+    }
   }
 
   //上で作った変数messageと、Botを動かす時に必要な情報を合わせた変数replyDataを作る
