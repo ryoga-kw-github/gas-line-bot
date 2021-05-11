@@ -37,11 +37,27 @@ function reply(e) {
 
     //Googleスプレッドシートのなか卯シートを参照する
     const nakauSheet = spreadsheet.getSheetByName('nakau');
-    
+
     ////シートのデータを入力している最終行までの数を取得する
     var lastRow = nakauSheet.getLastRow();
 
     //Googleスプレッドシートのなか卯シートを参照し、データを入力している最終行まで繰り返しセルのデータを取得する。
+
+
+
+    var message = {
+      //ここにjson書く
+    }
+  }else if (user_message == "はま寿司") {
+    //送られたメッセージが"はま寿司"だった場合
+
+    //Googleスプレッドシートのはま寿司シートを参照する
+    const hamazushiSheet = spreadsheet.getSheetByName('hamazushi');
+    
+    ////シートのデータを入力している最終行までの数を取得する
+    var lastRow = nakauSheet.getLastRow();
+
+    //Googleスプレッドシートのはま寿司シートを参照し、データを入力している最終行まで繰り返しセルのデータを取得する。
 
 
 
