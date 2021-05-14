@@ -16,6 +16,14 @@ function doPost(e) {
 
   //送られたテキストデータ(e)を取得してJSONオブジェクト変換して、変数eventsに代入
   var events = JSON.parse(e.postData.contents).events;
+  
+  //eventsをforEach(配列のFor文)に回して下記のif文を実行する
+  events.forEach(function (event) {      
+    //イベントタイプによって振り分け
+    if (event.type == "message") {
+        reply(event);
+    }
+  });
 
 }
 
