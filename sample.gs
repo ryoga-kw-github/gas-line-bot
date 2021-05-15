@@ -37,6 +37,31 @@ function reply(e) {
     //送られたメッセージが"ごはんメモ"だった場合
     var message = {
       //ここにjson書く
+      "replyToken": e.replyToken,
+      "messages": [{
+        "type": "text",
+        "text": "選択してください。",
+        "quickReply": {
+          "items": [
+            {
+              "type": "action",
+              "action": {
+                "type": "message",
+                "label": "なか卯",
+                "text": "Bot>なか卯"
+              }
+            },
+            {
+              "type": "action",
+              "action": {
+                "type": "message",
+                "label": "はま寿司",
+                "text": "Bot>はま寿司"
+              }
+            }
+          ]
+        }
+      }]
     }
   }else if (user_message == "説明") {
     //送られたメッセージが"説明"だった場合
