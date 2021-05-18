@@ -104,7 +104,7 @@ function reply(e) {
     const hamazushiSheet = spreadsheet.getSheetByName('hamazushi');
     
     ////シートのデータを入力している最終行までの数を取得する
-    var lastRow = nakauSheet.getLastRow();
+    var lastRow = hamazushiSheet.getLastRow();
 
     //Googleスプレッドシートのはま寿司シートを参照し、データを入力している最終行まで繰り返しセルのデータを取得する。
 
