@@ -120,7 +120,7 @@ function reply(e) {
     const hokkateiSheet = spreadsheet.getSheetByName('hokkatei');
     
     ////シートのデータを入力している最終行までの数を取得する
-    var lastRow = nakauSheet.getLastRow();
+    var lastRow = hokkateiSheet.getLastRow();
 
     //Googleスプレッドシートのはま寿司シートを参照し、データを入力している最終行まで繰り返しセルのデータを取得する。
 
