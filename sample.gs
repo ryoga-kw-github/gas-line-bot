@@ -125,7 +125,7 @@ function reply(e) {
     const hokkateiSheet = spreadsheet.getSheetByName('hokkatei');
     
     ////シートのデータを入力している最終行までの数を取得する
-    var lastRow = hokkateiSheet.getLastRow();
+    const lastRow = hokkateiSheet.getLastRow();
 
     //Googleスプレッドシートのほっかほっか亭シートを参照し、データを入力している最終行まで繰り返しセルのデータを取得する。
 
