@@ -15,7 +15,7 @@ function doPost(e) {
   //メッセージが来たか判定して、来てたらテキストに変換して変数に代入する。
 
   //送られたテキストデータ(e)を取得してJSONオブジェクト変換して、変数eventsに代入
-  var events = JSON.parse(e.postData.contents).events;
+  const events = JSON.parse(e.postData.contents).events;
   
   //eventsをforEach(配列のFor文)に回して下記のif文を実行する
   events.forEach(function (event) {      
