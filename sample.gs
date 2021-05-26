@@ -88,7 +88,7 @@ function reply(e) {
     const nakauSheet = spreadsheet.getSheetByName('nakau');
 
     ////シートのデータを入力している最終行までの数を取得する
-    var lastRow = nakauSheet.getLastRow();
+    const lastRow = nakauSheet.getLastRow();
 
     //Googleスプレッドシートのなか卯シートを参照し、データを入力している最終行まで繰り返しセルのデータを取得する。
 
