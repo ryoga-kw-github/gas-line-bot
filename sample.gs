@@ -30,7 +30,7 @@ function doPost(e) {
 //イベントタイプがメッセージだった時
 function reply(e) {
   ////送られたメッセージを取り出して代入
-  var user_message = e.message.text;
+  const user_message = e.message.text;
 
   //メッセージがクイックリプライテストだった場合
   if (user_message == "ごはんメモ") {
