@@ -97,7 +97,7 @@ function reply(e) {
 
 
 
-    var message = {
+    const message = {
       //ここにjson書く
     }
   }else if (user_message == "はま寿司") {
