@@ -134,7 +134,7 @@ function reply(e) {
 
 
 
-    var message = {
+    const message = {
       //ここにjson書く
     }
   }
