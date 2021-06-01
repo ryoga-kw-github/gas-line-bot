@@ -115,7 +115,7 @@ function reply(e) {
     const columns = [];
 
 
-    var message = {
+    const message = {
       //ここにjson書く
     }
   }else if (user_message == "ほっかほっか亭") {
