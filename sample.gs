@@ -140,7 +140,7 @@ function reply(e) {
   }
 
   //上で作った変数messageと、Botを動かす時に必要な情報を合わせた変数replyDataを作る
-  var replyData = {
+  const replyData = {
       "method": "post",
       "headers": {
           "Content-Type": "application/json",
