@@ -95,7 +95,7 @@ function reply(e) {
     const columns = [];
 
     for(var i=1;  i<=lastRow;  i++){
-      var name = nakauSheet.getRange(i,1).getValues();
+      const name = nakauSheet.getRange(i,1).getValues();
       var size = nakauSheet.getRange(i,2).getValues();
       var price = nakauSheet.getRange(i,3).getValues();
 
