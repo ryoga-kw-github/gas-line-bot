@@ -91,10 +91,22 @@ function reply(e) {
     const lastRow = nakauSheet.getLastRow();
 
     //Googleスプレッドシートのなか卯シートを参照し、データを入力している最終行まで繰り返しセルのデータを取得する。
-
     //カルーセルメッセージを入れるための、空の配列
     const columns = [];
 
+    for(var i=1;  i<=lastRow;  i++){
+      var name = nakauSheet.getRange(i,1).getValues();
+      var size = nakauSheet.getRange(i,2).getValues();
+      var price = nakauSheet.getRange(i,3).getValues();
+
+      var column = {
+        "title": name,
+        "text": size,
+        "action": []
+      };
+
+      columns[i] = column;
+    }
 
 
     const message = {
