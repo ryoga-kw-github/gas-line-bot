@@ -99,7 +99,7 @@ function reply(e) {
       const size = nakauSheet.getRange(i,2).getValues();
       const price = nakauSheet.getRange(i,3).getValues();
 
-      var column = {
+      const column = {
         "title": name,
         "text": size,
         "action": []
