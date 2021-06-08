@@ -111,7 +111,10 @@ function reply(e) {
 
     const message = {
       //ここにjson書く
+      "replyToken": e.replyToken,
+      "messages": [{}]
     }
+    
   }else if (user_message == "はま寿司") {
     //送られたメッセージが"はま寿司"だった場合
 
