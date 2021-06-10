@@ -115,6 +115,7 @@ function reply(e) {
       "messages": [{
         "type": "template",
         "template": {
+          "type": "carousel",
           
         }
       }]
