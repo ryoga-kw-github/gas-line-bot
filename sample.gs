@@ -114,6 +114,9 @@ function reply(e) {
       "replyToken": e.replyToken,
       "messages": [{
         "type": "template",
+        "template": {
+          
+        }
       }]
     }
 
