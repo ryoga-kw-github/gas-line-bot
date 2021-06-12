@@ -116,7 +116,7 @@ function reply(e) {
         "type": "template",
         "template": {
           "type": "carousel",
-          
+          "columns": columns
         }
       }]
     }
