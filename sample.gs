@@ -102,7 +102,15 @@ function reply(e) {
       const column = {
         "title": name,
         "text": size,
-        "action": []
+        "action": [
+          {
+            "type": "message",
+            "label": "addcount",
+            "text": "Bot>add"
+          },
+
+
+        ]
       };
 
       columns[i] = column;
