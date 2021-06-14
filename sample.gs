@@ -108,6 +108,11 @@ function reply(e) {
             "label": "addcount",
             "text": "Bot>add"
           },
+          {
+            "type": "message",
+            "label": "cancel",
+            "text": "Bot>Cancel"
+          }
 
 
         ]
