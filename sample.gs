@@ -114,8 +114,6 @@ function reply(e) {
             "label": "cancel",
             "text": "Bot>Cancel"
           }
-
-
         ]
       };
 
