@@ -102,6 +102,7 @@ function reply(e) {
       const column = {
         "title": name,
         "text": size,
+        "text": price,
         "action": [
           {
             "type": "message",
