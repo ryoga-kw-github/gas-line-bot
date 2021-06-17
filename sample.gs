@@ -120,7 +120,6 @@ function reply(e) {
       columns[i] = column;
     }
 
-
     const message = {
       //ここにjson書く
       "replyToken": e.replyToken,
