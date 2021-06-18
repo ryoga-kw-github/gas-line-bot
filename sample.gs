@@ -95,6 +95,7 @@ function reply(e) {
     const columns = [];
 
     for(var i=1;  i<=lastRow;  i++){
+      //なか卯のシートの商品名の列、サイズの列、価格の列を取得する。
       const name = nakauSheet.getRange(i,1).getValues();
       const size = nakauSheet.getRange(i,2).getValues();
       const price = nakauSheet.getRange(i,3).getValues();
