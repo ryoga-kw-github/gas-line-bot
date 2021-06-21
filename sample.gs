@@ -136,41 +136,9 @@ function reply(e) {
 
   }else if (user_message == "はま寿司") {
     //送られたメッセージが"はま寿司"だった場合
-
-    //Googleスプレッドシートのはま寿司シートを参照する
-    const hamazushiSheet = spreadsheet.getSheetByName('hamazushi');
     
-    ////シートのデータを入力している最終行までの数を取得する
-    const lastRow = hamazushiSheet.getLastRow();
-
-    //Googleスプレッドシートのはま寿司シートを参照し、データを入力している最終行まで繰り返しセルのデータを取得する。
-
-    //カルーセルメッセージを入れるための、空の配列
-    const columns = [];
-
-
-    const message = {
-      //ここにjson書く
-    }
   }else if (user_message == "ほっかほっか亭") {
     //送られたメッセージが"ほっかほっか亭"だった場合
-
-    //Googleスプレッドシートのほっかほっか亭シートを参照する
-    const hokkateiSheet = spreadsheet.getSheetByName('hokkatei');
-    
-    ////シートのデータを入力している最終行までの数を取得する
-    const lastRow = hokkateiSheet.getLastRow();
-
-    //Googleスプレッドシートのほっかほっか亭シートを参照し、データを入力している最終行まで繰り返しセルのデータを取得する。
-
-    //カルーセルメッセージを入れるための、空の配列
-    const columns = [];
-
-
-
-    const message = {
-      //ここにjson書く
-    }
   }
 
   //上で作った変数messageと、Botを動かす時に必要な情報を合わせた変数replyDataを作る
