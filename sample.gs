@@ -24,7 +24,6 @@ function doPost(e) {
         reply(event);
     }
   });
-
 }
 
 //イベントタイプがメッセージだった時
