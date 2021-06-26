@@ -2,7 +2,6 @@ const TOKEN = "Mv5JWhiE/LkQLcyCJiju+WdwGBH8LLkAGsyHWd8PLZDUafkbg3w92Mg99qNwyI+bs
 
 //スプレッドシートID
 const spreadsheet = SpreadsheetApp.openById("1IUtaffAixePvJ_h5iESsln7ANCXSfDs9asDmTzAL_hQ");
-
 //なか卯のシート
 const nakauSheet = spreadsheet.getSheetByName('nakau');
 //はま寿司のシート
