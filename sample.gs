@@ -11,7 +11,7 @@ const hokkateiSheet = spreadsheet.getSheetByName('hokkatei');
 
 //ここが本体部分
 function doPost(e) {
-  //メッセージが来たか判定して、来てたらテキストに変換して変数に代入する。
+  //メッセージが来たか判定して、来てたらテキストに変換して変数に代入する
 
   //送られたテキストデータ(e)を取得してJSONオブジェクト変換して、変数eventsに代入
   const events = JSON.parse(e.postData.contents).events;
