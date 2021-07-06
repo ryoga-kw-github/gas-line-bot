@@ -118,7 +118,6 @@ function reply(e) {
           }
         ]
       };
-
       columns[i] = column;
     }
 
