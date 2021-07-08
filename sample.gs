@@ -93,6 +93,7 @@ function reply(e) {
     //カルーセルメッセージを入れるための、空の配列
     const columns = [];
 
+    //シートのデータを入力している最終行までの回数分繰り返す
     for(var i=1;  i<=lastRow;  i++){
       //なか卯のシートの商品名の列、サイズの列、価格の列を取得する
       const name = nakauSheet.getRange(i,1).getValues();
