@@ -101,7 +101,8 @@ function reply(e) {
       const size = nakauSheet.getRange(i,2).getValues();
       const price = nakauSheet.getRange(i,3).getValues();
 
-      //上で取得した変数を使った(埋め込んだ)変数を作る
+      //↓上で取得した変数を使った(埋め込んだ)変数を作る
+
       //あとでjsonに変換する
       const column = {
         "title": name,
