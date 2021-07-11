@@ -155,4 +155,5 @@ function reply(e) {
 
   //●実際の送信部分●
   UrlFetchApp.fetch("https://api.line.me/v2/bot/message/reply", replyData);
+  
 }
