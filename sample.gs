@@ -20,6 +20,7 @@ function doPost(e) {
   events.forEach(function (event) {     
     //イベントタイプによって振り分け
     if (event.type == "message") {
+      //reply関数を呼び出す
       reply(event);
     }
   });
@@ -155,5 +156,5 @@ function reply(e) {
 
   //●実際の送信部分●
   UrlFetchApp.fetch("https://api.line.me/v2/bot/message/reply", replyData);
-  
+
 }
