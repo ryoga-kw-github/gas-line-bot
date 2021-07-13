@@ -28,7 +28,7 @@ function doPost(e) {
 
 //イベントタイプがメッセージだった時
 function reply(e) {
-  ////送られたメッセージを取り出して変数に代入
+  //送られたメッセージを取り出して変数に代入
   const user_message = e.message.text;
 
   //メッセージがクイックリプライテストだった場合
