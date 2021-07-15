@@ -34,6 +34,7 @@ function reply(e) {
 
   //メッセージがクイックリプライテストだった場合
   if (user_message == "ごはんメモ") {
+    
     //送られたメッセージが"ごはんメモ"だった場合
     const message = {
       //ここにjson書く
