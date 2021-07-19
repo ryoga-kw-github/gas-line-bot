@@ -102,6 +102,7 @@ function reply(e) {
 
     //シートのデータを入力している最終行までの回数分繰り返す
     for(var i=1;  i<=lastRow;  i++){
+      
       //なか卯のシートの商品名の列、サイズの列、価格の列を取得する
       const name = nakauSheet.getRange(i,1).getValues();
       const size = nakauSheet.getRange(i,2).getValues();
