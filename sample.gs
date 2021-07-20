@@ -1,5 +1,6 @@
 //LINEボットのトークン
 const TOKEN = "Mv5JWhiE/LkQLcyCJiju+WdwGBH8LLkAGsyHWd8PLZDUafkbg3w92Mg99qNwyI+bsc+Y/xManBaVwlTeKS2g0L4E97BwSvW2Yd9Tg6cU327bopYNepG3BoBDwsIG97CbCNuxLyrHG3b7k/QCPEvQuQdB04t89/1O/w1cDnyilFU=";
+
 //スプレッドシートID
 const spreadsheet = SpreadsheetApp.openById("1IUtaffAixePvJ_h5iESsln7ANCXSfDs9asDmTzAL_hQ");
 //なか卯のシート
@@ -102,7 +103,7 @@ function reply(e) {
 
     //シートのデータを入力している最終行までの回数分繰り返す
     for(var i=1;  i<=lastRow;  i++){
-      
+
       //なか卯のシートの商品名の列、サイズの列、価格の列を取得する
       const name = nakauSheet.getRange(i,1).getValues();
       const size = nakauSheet.getRange(i,2).getValues();
