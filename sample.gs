@@ -42,6 +42,7 @@ function reply(e) {
 
     //送られたメッセージが"ごはんメモ"だった場合
     const message = {
+      
       //ここにjson書く
       "replyToken": e.replyToken,
       "messages": [{
