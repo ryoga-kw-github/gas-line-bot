@@ -42,7 +42,7 @@ function reply(e) {
 
     //送られたメッセージが"ごはんメモ"だった場合
     const message = {
-      
+
       //ここにjson書く
       "replyToken": e.replyToken,
       "messages": [{
@@ -78,6 +78,7 @@ function reply(e) {
         }
       }]
     }
+    
   }else if (user_message == "説明") {
     //送られたメッセージが"説明"だった場合
 
