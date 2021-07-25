@@ -83,7 +83,7 @@ function reply(e) {
     //送られたメッセージが"説明"だった場合
 
     const message = {
-      
+
       //ここにjson書く
       "replyToken": e.replyToken,
       "messages": [{
@@ -91,6 +91,7 @@ function reply(e) {
         "text": "「ごはんメモ」と送信するとBotがQuickReplyで機能で選択肢を表示、ぽちぽちしたら品名リストと合計金額を自動算出"
       }]
     }
+    
   }else if (user_message == "なか卯") {
     //送られたメッセージが"なか卯"だった場合
 
