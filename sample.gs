@@ -91,7 +91,7 @@ function reply(e) {
         "text": "「ごはんメモ」と送信するとBotがQuickReplyで機能で選択肢を表示、ぽちぽちしたら品名リストと合計金額を自動算出"
       }]
     }
-    
+
   }else if (user_message == "なか卯") {
     //送られたメッセージが"なか卯"だった場合
 
@@ -118,6 +118,7 @@ function reply(e) {
 
       //あとでjsonに変換する
       const column = {
+        
         "title": name,
         "text": size,
         "text": price,
