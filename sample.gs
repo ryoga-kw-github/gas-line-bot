@@ -139,6 +139,7 @@ function reply(e) {
     }
 
     const message = {
+      
       //ここにjson書く
       "replyToken": e.replyToken,
       "messages": [{
