@@ -80,7 +80,7 @@ function reply(e) {
     }
 
   }else if (user_message == "説明") {
-    
+
     //送られたメッセージが"説明"だった場合
 
     const message = {
@@ -153,6 +153,7 @@ function reply(e) {
     }
     
   }else if (user_message == "はま寿司") {
+    
     //送られたメッセージが"はま寿司"だった場合
     
   }else if (user_message == "ほっかほっか亭") {
