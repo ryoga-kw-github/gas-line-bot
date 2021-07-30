@@ -153,10 +153,11 @@ function reply(e) {
     }
     
   }else if (user_message == "はま寿司") {
-    
+
     //送られたメッセージが"はま寿司"だった場合
     
   }else if (user_message == "ほっかほっか亭") {
+    
     //送られたメッセージが"ほっかほっか亭"だった場合
   }
 
