@@ -111,6 +111,7 @@ function reply(e) {
     for(var i=1;  i<=lastRow;  i++){
 
       //なか卯のシートの商品名の列、サイズの列、価格の列を取得する
+      //商品名の列
       const name = nakauSheet.getRange(i,1).getValues();
       const size = nakauSheet.getRange(i,2).getValues();
       const price = nakauSheet.getRange(i,3).getValues();
@@ -157,7 +158,7 @@ function reply(e) {
     //送られたメッセージが"はま寿司"だった場合
     
   }else if (user_message == "ほっかほっか亭") {
-    
+
     //送られたメッセージが"ほっかほっか亭"だった場合
   }
 
