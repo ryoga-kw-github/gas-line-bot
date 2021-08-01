@@ -113,6 +113,7 @@ function reply(e) {
       //なか卯のシートの商品名の列、サイズの列、価格の列を取得する
       //商品名の列
       const name = nakauSheet.getRange(i,1).getValues();
+      //サイズの列
       const size = nakauSheet.getRange(i,2).getValues();
       const price = nakauSheet.getRange(i,3).getValues();
 
