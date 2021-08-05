@@ -11,6 +11,8 @@ const hamazushiSheet = spreadsheet.getSheetByName('hamazushi');
 //ほっかほっか亭のシート
 const hokkateiSheet = spreadsheet.getSheetByName('hokkatei');
 
+
+
 //ここが本体部分
 function doPost(e) {
   //メッセージが来たか判定して、来てたらテキストに変換して変数に代入する
@@ -23,10 +25,8 @@ function doPost(e) {
     
     //イベントタイプによって振り分け
     if (event.type == "message") {
-
       //reply関数を呼び出す
       reply(event);
-
     }
   });
 }
