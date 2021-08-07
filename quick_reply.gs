@@ -16,8 +16,6 @@ for(var i=1;  i<=lastRow;  i++){
 }
 
 
-//Logger.log(nku + nku2 + nku3);
-
 //はま寿司シート(あとでif文の中に突っ込む)
 const hamazushiSheet = spreadsheet.getSheetByName('hamazushi');
 
