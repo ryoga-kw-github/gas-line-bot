@@ -22,7 +22,6 @@ const hamazushiSheet = spreadsheet.getSheetByName('hamazushi');
 //ほっかほっか亭シート(あとでif文の中に突っ込む)
 const hokkateiSheet = spreadsheet.getSheetByName('hokkatei');
 
-
 function doPost(e) {
     //jsonをパース
     var events = JSON.parse(e.postData.contents).events;
