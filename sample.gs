@@ -12,7 +12,6 @@ const hamazushiSheet = spreadsheet.getSheetByName('hamazushi');
 const hokkateiSheet = spreadsheet.getSheetByName('hokkatei');
 
 
-
 //ここが本体部分
 function doPost(e) {
 //メッセージが来たか判定して、来てたらテキストに変換して変数に代入する
