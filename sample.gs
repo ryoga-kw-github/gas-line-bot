@@ -64,14 +64,6 @@ function reply(e) {
                 "label": "はま寿司",
                 "text": "Bot>はま寿司"
               }
-            },
-            {
-              "type": "action",
-              "action": {
-                "type": "message",
-                "label": "ほっかほっか亭",
-                "text": "Bot>ほっかほっか亭"
-              }
             }
           ]
         }
