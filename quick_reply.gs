@@ -8,6 +8,7 @@ const spreadsheet = SpreadsheetApp.openById("1IUtaffAixePvJ_h5iESsln7ANCXSfDs9as
 const nakauSheet = spreadsheet.getSheetByName('nakau');
 
 var lastRow = nakauSheet.getLastRow();
+
 for(var i=1;  i<=lastRow;  i++){
       var name = nakauSheet.getRange(i,1).getValues();
       var size = nakauSheet.getRange(i,2).getValues();
