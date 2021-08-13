@@ -143,7 +143,6 @@ function reply(e) {
 
 
 
-
   }else if (user_message == "Bot>ほっかほっか亭"){
     const nakauSheet = spreadsheet.getSheetByName('nakau');
     var lastRow = nakauSheet.getLastRow();
