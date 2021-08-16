@@ -120,7 +120,6 @@ function reply(e) {
 
   }else if (user_message == "Bot>はま寿司"){
 
-
     var message = {
     
       "replyToken": e.replyToken,
