@@ -147,12 +147,11 @@ function reply(e) {
     }
     
   }else if (user_message == "はま寿司") {
-
     //送られたメッセージが"はま寿司"だった場合
     
   }else if (user_message == "ほっかほっか亭") {
-
     //送られたメッセージが"ほっかほっか亭"だった場合
+    
   }
 
   //上で作った変数messageと、Botを動かす時に必要な情報を合わせた変数replyDataを作る
