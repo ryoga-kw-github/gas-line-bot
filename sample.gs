@@ -151,7 +151,7 @@ function reply(e) {
     
   }else if (user_message == "ほっかほっか亭") {
     //送られたメッセージが"ほっかほっか亭"だった場合
-    
+
   }
 
   //上で作った変数messageと、Botを動かす時に必要な情報を合わせた変数replyDataを作る
@@ -166,5 +166,4 @@ function reply(e) {
 
   //●実際の送信部分●
   UrlFetchApp.fetch("https://api.line.me/v2/bot/message/reply", replyData);
-
 }
