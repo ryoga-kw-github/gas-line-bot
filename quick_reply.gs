@@ -35,8 +35,10 @@ function doPost(e) {
 
 //イベントタイプがメッセージだった場合
 function reply(e) {
+  
   //送られたメッセージを取り出す
   var user_message = e.message.text;
+
   //メッセージがクイックリプライテストだった場合
   if (user_message == "ごはんメモ") {
     var message = {
