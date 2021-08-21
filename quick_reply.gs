@@ -35,7 +35,7 @@ function doPost(e) {
 
 //イベントタイプがメッセージだった場合
 function reply(e) {
-  
+
   //送られたメッセージを取り出す
   var user_message = e.message.text;
 
@@ -77,6 +77,8 @@ function reply(e) {
       }]
     };
   }else if (user_message == "Bot>なか卯"){
+    
+    //nakauシートの情報を取得して変数に代入
     const nakauSheet = spreadsheet.getSheetByName('nakau');
     var lastRow = nakauSheet.getLastRow();
 
