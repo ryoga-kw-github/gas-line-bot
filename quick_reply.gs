@@ -144,6 +144,7 @@ function reply(e) {
     };
 
   }else if (user_message == "Bot>ほっかほっか亭"){
+    //nakauシートの情報を取得して変数に代入
     const nakauSheet = spreadsheet.getSheetByName('nakau');
     var lastRow = nakauSheet.getLastRow();
 
