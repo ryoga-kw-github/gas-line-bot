@@ -146,6 +146,7 @@ function reply(e) {
   }else if (user_message == "Bot>ほっかほっか亭"){
     //nakauシートの情報を取得して変数に代入
     const nakauSheet = spreadsheet.getSheetByName('nakau');
+    //最終行までの行数をカウントして変数に代入
     var lastRow = nakauSheet.getLastRow();
 
     //カルーセルメッセージを入れるための、空の配列
