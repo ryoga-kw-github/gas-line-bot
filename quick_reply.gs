@@ -186,12 +186,12 @@ function reply(e) {
 
   }
   var replyData = {
-      "method": "post",
-      "headers": {
-          "Content-Type": "application/json",
-          "Authorization": "Bearer " + TOKEN
-      },
-      "payload": JSON.stringify(message)
+    "method": "post",
+    "headers": {
+        "Content-Type": "application/json",
+        "Authorization": "Bearer " + TOKEN
+    },
+    "payload": JSON.stringify(message)
   };
   //送信部分
   UrlFetchApp.fetch("https://api.line.me/v2/bot/message/reply", replyData);
