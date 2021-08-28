@@ -23,14 +23,14 @@ const hamazushiSheet = spreadsheet.getSheetByName('hamazushi');
 const hokkateiSheet = spreadsheet.getSheetByName('hokkatei');
 
 function doPost(e) {
-    //jsonをパース
-    var events = JSON.parse(e.postData.contents).events;
-    events.forEach(function (event) {
-        //イベントタイプによって振り分け
-        if (event.type == "message") {
-            reply(event);
-        }
-    });
+  //jsonをパース
+  var events = JSON.parse(e.postData.contents).events;
+  events.forEach(function (event) {
+      //イベントタイプによって振り分け
+      if (event.type == "message") {
+          reply(event);
+      }
+  });
 }
 
 //イベントタイプがメッセージだった場合
