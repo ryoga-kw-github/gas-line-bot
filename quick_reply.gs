@@ -28,7 +28,7 @@ function doPost(e) {
   events.forEach(function (event) {
       //イベントタイプによって振り分け
       if (event.type == "message") {
-          reply(event);
+        reply(event);
       }
   });
 }
