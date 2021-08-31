@@ -93,19 +93,19 @@ function reply(e) {
 
       var column = {
         "title": name,
-        "text": size//,
-        //"action": [
-        //  {
-        //    "type": "message",
-        //    "label": "addcount",
-        //    "text": "Bot>add"
-        //  },
-        //  {
-        //    "type": "message",
-        //    "label": "cancel",
-        //    "text": "Bot>Cancel"
-        //  }
-        //]
+        "text": size,
+        "action": [
+          {
+            "type": "message",
+            "label": "addcount",
+            "text": "Bot>add"
+          },
+          {
+            "type": "message",
+            "label": "cancel",
+            "text": "Bot>Cancel"
+          }
+        ]
       };
 
       columns[i] = column;
