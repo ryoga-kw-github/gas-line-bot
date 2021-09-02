@@ -124,25 +124,6 @@ function reply(e) {
 
   }else if (user_message == "Bot>はま寿司"){
 
-    var message = {
-      "replyToken": e.replyToken,
-      "messages": [{
-        "type": "template",
-        "altText": "確認テンプレートメッセージ",
-        "template": {
-          "type": "buttons",
-          "text": "ボタンをクリック",
-          "actions": [
-            {
-              "type": "message",
-              "label": "ここをクリック",
-              "text": "ボタンをクリックしました。"
-            }
-          ]
-        }
-      }]
-    };
-
   }else if (user_message == "Bot>ほっかほっか亭"){
     //hokkateiシートの情報を取得して変数に代入
     const hokkateiSheet = spreadsheet.getSheetByName('hokkatei');
