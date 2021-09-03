@@ -174,6 +174,7 @@ function reply(e) {
     },
     "payload": JSON.stringify(message)
   };
+  
   //送信部分
   UrlFetchApp.fetch("https://api.line.me/v2/bot/message/reply", replyData);
 }
