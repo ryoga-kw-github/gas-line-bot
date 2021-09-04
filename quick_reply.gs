@@ -129,42 +129,6 @@ function reply(e) {
     const hokkateiSheet = spreadsheet.getSheetByName('hokkatei');
     //最終行までの行数をカウントして変数に代入
     var lastRow = hokkateiSheet.getLastRow();
-
-    //カルーセルメッセージを入れるための、空の配列
-    var columns = [];
-
-    for(var i=1;  i<=10;  i++){
-      var column = {
-        "title": "name",
-        "text": "size",
-        "actions": [
-          {
-            "type": "buttons",
-            "label": "基本情報を見る",
-            "text": "dataURL"
-          },
-          {
-            "type": "buttons",
-            "label": "地図を見る",
-            "text": "mapURL"
-          }
-        ]
-      }
-
-      columns[i] = column;
-    }
-
-    var message = {
-      "replyToken": e.replyToken,
-      "messages": [{
-        "type": "template",
-        "template": {
-          "type": "carousel",
-          "columns": columns
-        }
-      }]
-    };
-
   }
   var replyData = {
     "method": "post",
@@ -174,7 +138,7 @@ function reply(e) {
     },
     "payload": JSON.stringify(message)
   };
-  
+
   //送信部分
   UrlFetchApp.fetch("https://api.line.me/v2/bot/message/reply", replyData);
 }
